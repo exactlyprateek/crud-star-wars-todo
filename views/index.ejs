@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
-    <h1>Node crud app</h1>
-    <form action="/quotes" method="POST">
+  <h1>Node crud app</h1>
+  <form action="/quotes" method="POST">
     <input type="text" placeholder="name" name="name">
     <input type="text" placeholder="quote" name="quote">
     <button type="submit">Submit</button>
-    </form>
-    <h2>Quotes</h2>
-    <% for(i = 0; i< quotes.length ; i ++){ %>
-       <li>
-           <span><%= quotes[i].name %></span>: 
-        <span><%= quotes[i].quote %></span>
-       </li>  
-    <% } %>
-    <div>
-        <h2>Darth Vadar invades!</h2>
-        <p>
-          Replace first Yoda's quote with a quote written by Darth Vadar
-        </p>
-        <button id="update-button">Replace Yoda's quote</button>
-      </div>
-      <div>
-        <h2>Remove Darth Vadar!</h2>
-        <p>
-          Delete one Darth Vadar's quote. Does nothing if there are no more Darth
-          Vadar's quote
-        </p>
-        <button id="delete-button">Delete Darth Vadar's quote</button>
-      </div>
-      <div id="messages"></div>
-      <script src="/main.js"></script>
-</body> 
+  </form>
+  <h2>Quotes</h2>
+  <% for(i = 0; i< quotes.length ; i ++){ %>
+  <li>
+    <span><%= quotes[i].name %></span>:
+    <span><%= quotes[i].quote %></span>
+  </li>
+  <% } %>
+  <div>
+    <h2>Darth Vadar invades!</h2>
+    <p>
+      Replace first Yoda's quote with a quote written by Darth Vadar
+    </p>
+    <button id="update-button">Replace Yoda's quote</button>
+  </div>
+  <div>
+    <h2>Remove Darth Vadar!</h2>
+    <p>
+      Delete one Darth Vadar's quote. Does nothing if there are no more Darth
+      Vadar's quote
+    </p>
+    <button id="delete-button">Delete Darth Vadar's quote</button>
+  </div>
+  <div id="messages"></div>
+  <script src="/main.js"></script>
+</body>
+
 </html>
